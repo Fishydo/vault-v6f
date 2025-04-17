@@ -44,39 +44,16 @@
         <h1 class="text-3xl font-bold">Vault V6.5</h1>
         <a href="/" class="px-10 py-3 border border-neutral-400/50 rounded-lg hover:bg-black/50 transition">🏠 Home</a>
         <a href="/g" class="px-10 py-3 border border-neutral-400/50 rounded-lg hover:bg-black/50 transition">🎮 Games</a>
-        <input id="search-input" type="text" placeholder="🔍 Search apps"
-          class="flex-grow px-4 py-3 border border-neutral-400/50 rounded-lg bg-transparent placeholder-neutral-400 focus:ring-2 focus:ring-neutral-800 transition focus:bg-black/50" />
+        <a href="/a" class="px-10 py-3 border border-neutral-400/50 rounded-lg hover:bg-black/50 transition">🪟 Apps</a>
       </div>
 
       <div class="relative">
-        <div id="game-container" class="mt-4 hidden">
-          <iframe id="game-iframe" name="app-iframe-fr" title="Game frame" src=""
-            class="w-full h-[80vh] bg-transparent rounded-lg"></iframe>
-          <button id="fullscreen-btn"
-            class="mt-2 px-14 py-3 border border-neutral-700 rounded-lg hover:bg-neutral-900 transition">
-            ⛶ Fullscreen
-          </button>
-        </div>
-
         <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mt-4" id="game-grid"></div>
       </div>
     </div>
   </div>
 
   <script>
-    function openInUV(url) {
-      if (typeof __uv$config === 'undefined') {
-        alert('Ultraviolet scripts not loaded!');
-        return;
-      }
-  
-      const encodedUrl = __uv$config.encodeUrl(url);
-      const fullPath = __uv$config.prefix + encodedUrl;
-
-      document.getElementById('game-iframe').src = fullPath;
-      document.getElementById('game-container').classList.remove('hidden');
-    }
-  
     const appGrid = document.getElementById('game-grid');
     const appIframe = document.getElementById('game-iframe');
     const appContainer = document.getElementById('game-container');
@@ -93,43 +70,21 @@
           <img src="${app.imgSrc}" alt="${app.title}" class="w-full h-32 object-cover">
           <div class="p-2 text-center text-white text-sm">${app.title}</div>
         `;
-        appCard.addEventListener('click', () => openInUV(app.link));
+        appCard.addEventListener('click', () => {
+          window.open(app.link, '_blank');
+        });
         appGrid.appendChild(appCard);
       });
     }
   
-    fetch('a.json')
+    fetch('partners.json')
       .then(res => res.json())
       .then(data => {
         apps = data;
         renderApps(apps);
       })
       .catch(err => console.error('Error loading apps:', err));
-  
-    searchInput.addEventListener('input', () => {
-      const term = searchInput.value.toLowerCase().trim();
-      const filtered = apps.filter(app =>
-        app.title.toLowerCase().includes(term)
-      );
-      renderApps(filtered);
-    });
-  
-    fullscreenBtn.addEventListener('click', () => {
-      const iframe = document.getElementById('game-iframe');
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
-    });
-  </script>
-        <script src="/uv/uv.bundle.js" charset="UTF-8" defer></script>
-        <script src="/uv/uv.config.js" charset="UTF-8" defer></script>
-        <script src="/register-sw.js" charset="UTF-8" defer></script>
-        <script src="/search.js" charset="UTF-8" defer></script>
-        <script src="/index.js" charset="UTF-8" defer></script>
+  </script>  
 </body>
 
 </html>
