@@ -10,7 +10,7 @@ body {
 }
 
 .text-3xl, .text-5xl {
-  font-family: 'Renogare', 'Inter', 'Verdana', 'Arial', sans-serif !important;
+  font-family: 'Renogare', 'Helvetica', sans-serif !important;
 }
 
 i {
