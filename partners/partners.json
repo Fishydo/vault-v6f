@@ -40,8 +40,18 @@
     "imgSrc": "petezah.png"
   },
   {
+    "title": "Yixboost Games",
+    "link": "https://play.yixboost.dev/",
+    "imgSrc": "yixboost.png"
+  },
+  {
+    "title": "Sakura",
+    "link": "https://sakuraon.top/",
+    "imgSrc": "sakura.png"
+  },
+  {
     "title": "If you wanna be on here, DM me on Discord at @ajh.goated",
-    "link": "/",
+    "link": "/contact/",
     "imgSrc": "bruh.jpg"
   }
 ]
