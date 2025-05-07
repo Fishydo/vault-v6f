@@ -68,6 +68,21 @@
         "title": "Cobalt",
         "imgSrc": "cobalt.png",
         "link": "https://cobalt.tools"
+      },
+      {
+        "title": "Coconut",
+        "imgSrc": "coconut.png",
+        "link": "https://coconut.smartfoloo.space/"
+      },
+      {
+        "title": "QuillBot",
+        "imgSrc": "quillbot.png",
+        "link": "https://quillbot.com/"
+      },
+      {
+        "title": "szvyflix",
+        "imgSrc": "szvyflix.ico",
+        "link": "https://szvyflix.vercel.app/"
       }
   ]
   

@@ -10,6 +10,11 @@
     "title": "UNDERTALE"
   },
   {
+    "link": "Run3/index.html",
+    "imgSrc": "run3/icon.jpg",
+    "title": "Run 3"
+  },
+  {
     "link": "1/index.html",
     "imgSrc": "1/meta/apple-touch-icon.png",
     "title": "1"
