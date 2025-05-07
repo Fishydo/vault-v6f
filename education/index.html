@@ -37,7 +37,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6084312783725533" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-black text-white min-h-screen flex flex-col overflow-y-auto" onload="alert('Opening a VM takes a long time to load. If the output is just blank, that means its loading.')">
+<body class="bg-black text-white min-h-screen flex flex-col overflow-y-auto">
   <div class="flex flex-col items-center p-4 relative overflow-hidden">
     <div class="container text-center max-w-xxl">
       <div class="flex items-center space-x-4 mb-4">
@@ -59,10 +59,7 @@
           </button>
         </div>
 
-        <div class="flex items-center justify-center h-screen">
-          <div class="grid grid-cols-3 md:grid-cols-6 gap-4" id="game-grid"></div>
-        </div>
-        
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mt-4" id="game-grid"></div>
       </div>
     </div>
   </div>
@@ -102,13 +99,13 @@
       });
     }
   
-    fetch('vm.json')
+    fetch('education.json')
       .then(res => res.json())
       .then(data => {
         apps = data;
         renderApps(apps);
       })
-      .catch(err => console.error('Error loading VM selection:', err));
+      .catch(err => console.error('Error loading apps:', err));
   
     searchInput.addEventListener('input', () => {
       const term = searchInput.value.toLowerCase().trim();

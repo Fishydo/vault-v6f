@@ -1,14 +1,4 @@
 [
-    {
-        "title": "Ubuntu",
-        "imgSrc": "ubuntu.png",
-        "link": "https://tiktok.com"
-      },
-      {
-        "title": "Windows 10",
-        "imgSrc": "windows10.png",
-        "link": "https://tiktok.com"
-      },
       {
         "title": "Alpine Linux",
         "imgSrc": "alpine.png",
