@@ -40,6 +40,11 @@
     "title": "Run 3"
   },
   {
+    "link": "golf-orbit/index.html",
+    "imgSrc": "golf-orbit/logo.jpg",
+    "title": "Golf Orbit"
+  },
+  {
     "link": "1/index.html",
     "imgSrc": "1/meta/apple-touch-icon.png",
     "title": "1"
