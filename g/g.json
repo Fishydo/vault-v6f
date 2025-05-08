@@ -50,6 +50,11 @@
     "title": "Champion Island"
   },
   {
+    "link": "sandtrix/index.html",
+    "imgSrc": "sandtrix/ico.avif",
+    "title": "Sandtrix"
+  },
+  {
     "link": "1/index.html",
     "imgSrc": "1/meta/apple-touch-icon.png",
     "title": "1"
