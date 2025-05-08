@@ -87,9 +87,6 @@ background-color: #fff;
 
 }
 
-
-
-
 @-webkit-keyframes falling {
 
   0% {
@@ -139,4 +136,18 @@ background-color: #fff;
   opacity: 0;
 }
 }
-
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #aaa #5e5e5e !important;
+}
+*::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+*::-webkit-scrollbar-track {
+  background: #f0f0f0 !important;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #aaa !important;
+  border-radius: 4px !important;
+}

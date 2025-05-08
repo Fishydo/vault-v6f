@@ -10,6 +10,26 @@
     "title": "UNDERTALE"
   },
   {
+    "link": "repo/index.html",
+    "imgSrc": "repo/icon.png",
+    "title": "R.E.P.O."
+  },
+  {
+    "link": "pizzatower/index.html",
+    "imgSrc": "pizzatower/favicon.png",
+    "title": "Pizza Tower (Noise Update)"
+  },
+  {
+    "link": "supermariokartzx/index.html",
+    "imgSrc": "supermariokartzx/icon.jpg",
+    "title": "Super Mario Kart ZX"
+  },
+  {
+    "link": "eagler188/Minecraft 1.8.8.html",
+    "imgSrc": "eagler188/icon.png",
+    "title": "Eaglercraft 1.8.8"
+  },
+  {
     "link": "run3/index.html",
     "imgSrc": "run3/icon.jpg",
     "title": "Run 3"
