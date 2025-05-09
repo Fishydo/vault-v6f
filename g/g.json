@@ -15,6 +15,11 @@
     "title": "BitLife"
   },
   {
+    "link": "blockblast/index.html",
+    "imgSrc": "blockblast/icon.jpg",
+    "title": "Block Blast"
+  },
+  {
     "link": "UNDERTALE/index.html",
     "imgSrc": "UNDERTALE/ico.webp",
     "title": "UNDERTALE"
