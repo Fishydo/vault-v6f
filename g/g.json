@@ -10,6 +10,11 @@
     "title": "Crazy Chicken 3D"
   },
   {
+    "link": "bitlife/index.html",
+    "imgSrc": "bitlife/logo.png",
+    "title": "BitLife"
+  },
+  {
     "link": "UNDERTALE/index.html",
     "imgSrc": "UNDERTALE/ico.webp",
     "title": "UNDERTALE"
@@ -18,6 +23,11 @@
     "link": "repo/index.html",
     "imgSrc": "repo/icon.png",
     "title": "R.E.P.O."
+  },
+  {
+    "link": "1v1lol/index.html",
+    "imgSrc": "1v1lol/splash.png",
+    "title": "1v1.lol (might not work)"
   },
   {
     "link": "pizzatower/index.html",
