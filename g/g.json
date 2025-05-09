@@ -10,6 +10,21 @@
     "title": "Crazy Chicken 3D"
   },
   {
+    "link": "snow-rider-3d/index.html",
+    "imgSrc": "snow-rider-3d/snowrider.png",
+    "title": "Snow Rider 3D"
+  },
+  {
+    "link": "cluster-rush/index.html",
+    "imgSrc": "cluster-rush/cluster-rush.png",
+    "title": "Cluster Rush"
+  },
+  {
+    "link": "ovo/index.html",
+    "imgSrc": "ovo/icon-256.png",
+    "title": "OvO"
+  },
+  {
     "link": "bitlife/index.html",
     "imgSrc": "bitlife/logo.png",
     "title": "BitLife"
