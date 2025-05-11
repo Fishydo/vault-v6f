@@ -78,6 +78,23 @@ https://cdn.jsdelivr.net/npm/tailwindcss@4.1.4/dist/lib.min.js
          
    </head>
    <body class="bg-black">
+
+<div id="loading-screen" class="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center text-white">
+    <div class="w-48 h-48 border-[20px] border-white border-t-transparent rounded-full animate-spin mb-6"></div>
+    <p class="text-4xl font-semibold tracking-wide">Loading AJH’s Vault...</p>
+  </div>
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loading-screen");
+      loader.classList.add("opacity-0", "transition-opacity", "duration-500");
+  
+      setTimeout(() => {
+        loader.remove();
+        document.body.classList.remove("overflow-hidden");
+      }, 500);
+    });
+  </script>
+  
       <canvas id="canvas"></canvas>
       <div class="text-white min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
       <div class="container text-center max-w-md relative">
@@ -192,4 +209,5 @@ https://cdn.jsdelivr.net/npm/tailwindcss@4.1.4/dist/lib.min.js
         channel: '1370838378567958588' // #💬┆widgetbot
     })
 </script>
+  
 </html>
