@@ -8,10 +8,6 @@
     />
     <title>Ultraviolet | Error</title>
     <meta
-      name="description"
-      content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
-    />
-    <meta
       name="theme-color"
       media="(prefers-color-scheme: dark)"
       content="#434c5e"
@@ -23,21 +19,70 @@
   </head>
 
   <body>
-    <div class="logo-wrapper left-margin">
+    <div style="margin: 1em;">
       <h1>404</h1>
-    </div>
-    <p>The file requested either isn't available on the server, isn't available publicly, there's a glitch, or the service worker has failed.</p>
+    <p>There can be a multitude of reasons why.</p>
+    <ol>
+      <li>The file requested doesn't exist.</li>
+      <li>The file requested relies on a proxy, and the proxy didn't load.</li>
+      <li>The service worker isn't registered.</li>
+      <li>Your connection is terrible (my condolences twin🥀)</li>
+      <li>The file requested didn't fetch.</li>
+    </ol>
+    Now, how can you fix this?
+    <ol>
+      <li>Refresh the page.</li>
+      <li>Do a hard refresh (CTRL + SHIFT + R on Chrome)</li>
+      <li>Clear the site cache (warning: this will clear your progress on games!)</li>
+      <li>Use a different link for the site.</li>
+      <li>Use the register service worker button below.</li>
+    </ol>
     <div class="desc left-margin">
       <p id="uv-error"></p>
       <code id="uv-error-code"></code>
-      <button id="uv-register-sw" value="Register service worker">
-        Register ServiceWorker
+      <button onclick="registerServiceWorker()">
+        Register service worker
       </button>
     </div>
-
+</div>
     <script src="uv/uv.bundle.js" charset=“UTF-8”></script>
     <script src="uv/uv.config.js"></script>
     <script src="register-sw.js"></script>
     <script src="error.js"></script>
+
+    <script>
+      function registerServiceWorker() {
+        "use strict";
+        /**
+         * Distributed with Ultraviolet and compatible with most configurations.
+         */
+        const stockSW = "/uv-sw.js";
+
+        /**
+         * List of hostnames that are allowed to run serviceworkers on http:
+         */
+        const swAllowedHostnames = ["localhost", "127.0.0.1"];
+
+        /**
+         * Global util
+         * Used in 404.html and index.html
+         */
+        async function registerSW() {
+          if (
+            location.protocol !== "https:" &&
+            !swAllowedHostnames.includes(location.hostname)
+          )
+            throw new Error("Service workers cannot be registered without https.");
+
+          if (!navigator.serviceWorker)
+            throw new Error("Your browser doesn't support service workers.");
+
+          // Ultraviolet has a stock `sw.js` script.
+          await navigator.serviceWorker.register(stockSW, {
+            scope: __uv$config.prefix,
+          });
+        }
+      }
+    </script>
   </body>
 </html>
