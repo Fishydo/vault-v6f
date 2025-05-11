@@ -77,7 +77,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@4.1.4/dist/lib.min.js
      crossorigin="anonymous"></script>
          
    </head>
-   <body class="bg-black">
+   <body class="bg-black" onload="registerServiceWorker()">
 
 <div id="loading-screen" class="fixed inset-0 z-[9999] bg-black flex flex-col items-center justify-center text-white">
     <div class="w-48 h-48 border-[20px] border-white border-t-transparent rounded-full animate-spin mb-6"></div>
@@ -202,6 +202,40 @@ https://cdn.jsdelivr.net/npm/tailwindcss@4.1.4/dist/lib.min.js
       <script src="/register-sw.js" charset="UTF-8" defer></script>
       <script src="/search.js" charset="UTF-8" defer></script>
       <script src="/index.js" charset="UTF-8" defer></script>
+      <script>
+        function registerServiceWorker() {
+          "use strict";
+          /**
+           * Distributed with Ultraviolet and compatible with most configurations.
+           */
+          const stockSW = "/uv-sw.js";
+  
+          /**
+           * List of hostnames that are allowed to run serviceworkers on http:
+           */
+          const swAllowedHostnames = ["localhost", "127.0.0.1"];
+  
+          /**
+           * Global util
+           * Used in 404.html and index.html
+           */
+          async function registerSW() {
+            if (
+              location.protocol !== "https:" &&
+              !swAllowedHostnames.includes(location.hostname)
+            )
+              throw new Error("Service workers cannot be registered without https.");
+  
+            if (!navigator.serviceWorker)
+              throw new Error("Your browser doesn't support service workers.");
+  
+            // Ultraviolet has a stock `sw.js` script.
+            await navigator.serviceWorker.register(stockSW, {
+              scope: __uv$config.prefix,
+            });
+          }
+        }
+      </script>
   </body>
 <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
     new Crate({
