@@ -103,19 +103,20 @@ https://cdn.jsdelivr.net/npm/tailwindcss@4.1.4/dist/lib.min.js
                  Vault v6.5
              </div>
          </div>
-         
-              <form id="uv-form" class="space-y-4 -translate-y-2">
+
+              <div class="grid grid-cols-2 gap-2 mb-2 mt-4">
+                
+                <form id="uv-form" class="col-span-2">
                   <input id="uv-search-engine" value="https://duckduckgo.com/search?q=%s" type="hidden"/> 
                   <input 
                       id="uv-address" 
                       type="text" 
                       placeholder="🔍 The fastest static proxy, ever." 
                       required
-                      class="w-full px-4 py-3 bg-transparent border border-neutral-400/50 rounded-lg text-white placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:bg-black/50 transition-all duration-250"
+                      class="w-full px-4 py-2 bg-transparent border border-neutral-400/50 rounded-lg text-white placeholder-neutral-300 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:bg-black/50 transition-all duration-250"
                   />
               </form>
-
-              <div class="grid grid-cols-3 gap-2 mb-2">
+                
                 <a 
                     href="/g" 
                     class="py-2 bg-transparent border border-neutral-400/50 rounded-lg text-white hover:bg-black/50 transition-all duration-250 self-center"
@@ -151,8 +152,13 @@ https://cdn.jsdelivr.net/npm/tailwindcss@4.1.4/dist/lib.min.js
     </a>
     <a 
     href="/ia" 
-    class="py-2 bg-transparent border border-neutral-400/50 rounded-lg text-white hover:bg-black/50 transition-all duration-250 self-center hidden"
+    class="py-2 bg-transparent border border-neutral-400/50 rounded-lg text-white hover:bg-black/50 transition-all duration-250 self-center"
 ><i class="fa-solid fa-robot"></i> AI
+</a>
+<a 
+href="/c" 
+class="py-2 bg-transparent border border-neutral-400/50 rounded-lg text-white hover:bg-black/50 transition-all duration-250 self-center"
+><i class="fa-solid fa-message"></i> Chatroom
 </a>
     <!--
     <a 
