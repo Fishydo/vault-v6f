@@ -5,11 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Verdana', 'Arial', sans-serif !important;
-  background: #0d2e21;
-background: -webkit-linear-gradient(19deg, rgba(13, 46, 33, 1) 0%, rgba(35, 77, 52, 1) 35%, rgba(99, 93, 36, 1) 100%);
-background: -moz-linear-gradient(19deg, rgba(13, 46, 33, 1) 0%, rgba(35, 77, 52, 1) 35%, rgba(99, 93, 36, 1) 100%);
-background: linear-gradient(19deg, rgba(13, 46, 33, 1) 0%, rgba(35, 77, 52, 1) 35%, rgba(99, 93, 36, 1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0D2E21", endColorstr="#635D24", GradientType=0);
+  background: #000000;
 }
 
 @font-face {
@@ -155,3 +151,4 @@ background-color: #fff;
   background-color: #aaa !important;
   border-radius: 4px !important;
 }
+
