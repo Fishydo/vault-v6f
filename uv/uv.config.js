@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/go/',
-    bare: 'https://tomp.app/',
+    bare: 'https://lcc-fast.mooo.com/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv/uv.handler.js',
