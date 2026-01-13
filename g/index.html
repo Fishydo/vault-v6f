@@ -119,7 +119,7 @@
       const fullscreenBtn = document.getElementById('fullscreen-btn');
       const searchInput = document.getElementById('search-input');
       let games = [];
-      fetch('g.json')
+      fetch('https://vault-v6f.vercel.app/g.json')
           .then(response => response.json())
           .then(loadedGames => {
               games = loadedGames;
@@ -200,3 +200,4 @@
  </body>
  
 </html>
+
